@@ -6,7 +6,7 @@
 /*   By: dvaisman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/26 14:51:59 by dvaisman          #+#    #+#             */
-/*   Updated: 2022/12/04 15:36:40 by dvaisman         ###   ########.fr       */
+/*   Updated: 2022/12/04 15:59:37 by dvaisman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,12 @@
 # endif
 
 int		ft_atoi(const char *str);
-bool		ft_isdigit(int c);
-bool		ft_isspace(int c);
+int		ft_strcmp(char *s1, char *s2);
+int		ft_strcmp_three(char *s1, char *s2, char *s3);
+bool	ft_isdigit(int c);
+bool	ft_isspace(int c);
+char	*ft_strncpy(char *src);
+char	*ft_strrncpy(char *src);
 char	*ft_strdup(const char *s1);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*get_next_line(int fd);

@@ -195,6 +195,44 @@ char	*get_next_line(int fd)
 	return (line);
 }
 
+char	*ft_strncpy(char *src)
+{
+	char	*dest;
+	int    i;
+	int	   j;
+	int	   k;
+
+    i = 0;
+	k = 0;
+	j = (ft_strlen(src) - 1) / 2;
+	dest = (char *)malloc(sizeof(char) * j + 1);
+    while (i < j)
+    {
+        dest[k] = src[i];
+		i++;
+		k++;
+    }
+	dest[k] = '\0';
+    return (dest);
+}
+
+char	*ft_strrncpy(char *src)
+{
+	char   *dest;
+	int    i;
+	int	   j;
+
+    i = ft_strlen(src) - 1;
+	dest = (char *)malloc(sizeof(char) * (i + 1));
+	j = 0;
+    while (i > ft_strlen(src) / 2)
+    {
+        dest[j++] = src[--i];
+    }
+	dest[j] = '\0';
+    return (dest);
+}
+
 char	*ft_strdup(const char *s1)
 {
 	char	*str;

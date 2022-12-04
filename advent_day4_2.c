@@ -19,7 +19,7 @@ int	check_range(char *str, char *str_1, char *str2, char *str_2)
 		return (1);
 	else if (s1 >= s3 && s2 <= s4)
 		return (1);
-	else if (s2 >= s3)
+	else if (s2 >= s3 && s4 >= s1)
 		return (1);
 	else
 		return (0);
@@ -41,7 +41,7 @@ int	main(void)
 	int		fd1;
 	fd1 = open("sorting.txt", O_RDONLY);
 	i = 1;
-	while (i <= 10)
+	while (i <= 1000)
 	{
 		line = get_next_line(fd1);
 		tmp = ft_split(line, ',');
@@ -53,8 +53,7 @@ int	main(void)
 		str_1 = ft_strjoin(arr[1], "");
 		str2 = ft_strjoin(arr2[0], "");
 		str_2 = ft_strjoin(arr2[1], "");
-		result = check_range(str, str_1, str2, str_2);
-		printf("%d\n", result);
+		result = result + check_range(str, str_1, str2, str_2);
 		i++;
 	}
 	printf("%d\n", result);

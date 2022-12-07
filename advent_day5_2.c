@@ -92,7 +92,7 @@ int	main(void)
 		tower4, tower5, tower6, tower7, tower8};
 	char	*temp;
 	int		i = 1;
-	int		fd1 = open("day5.txt", O_RDONLY);
+	int		fd1 = open("shipping.txt", O_RDONLY);
 	int		moves;
 	int		size;
 	int		size2;

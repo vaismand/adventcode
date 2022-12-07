@@ -37,10 +37,8 @@ int	main(void)
 	char	*str2;
 	char	*str_2;
 	int		result;
-	int		i;
-	int		fd1;
-	fd1 = open("sorting.txt", O_RDONLY);
-	i = 1;
+	int		i = 1;
+	int		fd1 = open("day4.txt", O_RDONLY);
 	while (i <= 1000)
 	{
 		line = get_next_line(fd1);

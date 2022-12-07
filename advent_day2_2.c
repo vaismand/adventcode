@@ -40,12 +40,9 @@ int    check_conditions(char *line)
 int    main(void)
 {
     char    *line;
-    static int        number;
-    int        i;
-    int        fd1;
-    fd1 = open("game.txt", O_RDONLY);
-    i = 1;
-    number = 0;
+    static int        number = 0;
+    int        i = 1;
+    int        fd1 = open("day2.txt", O_RDONLY);
     while (i <= 2500)
     {
         line = get_next_line(fd1);

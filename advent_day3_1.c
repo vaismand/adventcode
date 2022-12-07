@@ -37,12 +37,9 @@ int	main(void)
 	char	*line;
 	char	*line_1;
 	char	*line_2;
-	static int		number;
-	int		i;
-	int		fd1;
-	fd1 = open("inventory.txt", O_RDONLY);
-	i = 1;
-	number = 0;
+	static int		number = 0;
+	int		i = 1;
+	int		fd1 = open("day3.txt", O_RDONLY);
 	while (i <= 300)
 	{
 		line = get_next_line(fd1);

@@ -29,12 +29,9 @@ int	main(void)
 	char	*line;
 	static int number[250];
 	int 	total;
-	int		i;
-	int		j;
-	int		fd1;
-	fd1 = open("calories.txt", O_RDONLY);
-	i = 1;
-	j = 0;
+	int		i = 1;
+	int		j = 0;
+	int		fd1 = open("day1.txt", O_RDONLY);
 	while (i <= 250)
 	{
 		number[j] = 0;

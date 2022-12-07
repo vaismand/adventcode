@@ -88,14 +88,16 @@ int	main(void)
 	char	*tower6[60] = {"H", "G", "T", "R", "J", "D", "S", "Q"};
 	char	*tower7[60] = {"P", "F", "V"};
 	char	*tower8[60] = {"D", "R", "S", "T", "J"};
-	char	**towers[9] = {tower0, tower1, tower2, tower3, \
-		tower4, tower5, tower6, tower7, tower8};
+	char	*temp_tower[60] = {NULL};
+	char	**towers[10] = {tower0, tower1, tower2, tower3, \
+		tower4, tower5, tower6, tower7, tower8, temp_tower};
 	char	*temp;
 	int		i = 1;
-	int		fd1 = open("shipping.txt", O_RDONLY);
+	int		fd1 = open("day5.txt", O_RDONLY);
 	int		moves;
 	int		size;
 	int		size2;
+	int		size3;
 	int		src;
 	int		dst;
 	while (i <= 502)
@@ -106,18 +108,29 @@ int	main(void)
 		dst = atoi_dst(line) - 1; 
 		size = tower_last_index(towers[src]);
 		size2 = tower_last_index(towers[dst]);
+		size3 = tower_last_index(towers[9]);
 		while (moves != 0)
 		{
 			temp = towers[src][size - 1];
-			towers[dst][size2] = temp;
+			towers[9][size3] = temp;
 			towers[src][size - 1] = NULL;
-			size2++;
+			size3++;
 			moves--;
 			size--;
 		}
+		moves = atoi_str(line);
+		while (moves != 0)
+		{
+			temp = towers[9][size3 - 1];
+			towers[dst][size2] = temp;
+			towers[9][size3 - 1] = NULL;
+			size3--;
+			moves--;
+			size2++;
+		}
 		i++;
 	}
-	for (int i = 0; i < 9; i++)
+	for (int i = 0; i < 10; i++)
 	{
 		printf("Tower %d: ", i + 1);
 		for (int j = 0; towers[i][j] != NULL; j++)

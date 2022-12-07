@@ -17,11 +17,11 @@ int    check_conditions(char *line)
     arr[8] = "C Z\n";
     number = 0;
     if (strcmp(line,arr[0]) == 0)
-        number = 4;
-    else if (strcmp(line,arr[1]) == 0)
-        number = 8;
-    else if (strcmp(line,arr[2]) == 0)
         number = 3;
+    else if (strcmp(line,arr[1]) == 0)
+        number = 4;
+    else if (strcmp(line,arr[2]) == 0)
+        number = 8;
     else if (strcmp(line,arr[3]) == 0)
         number = 1;
     else if (strcmp(line,arr[4]) == 0)
@@ -29,11 +29,11 @@ int    check_conditions(char *line)
     else if (strcmp(line,arr[5]) == 0)
         number = 9;
     else if (strcmp(line,arr[6]) == 0)
-        number = 7;
-    else if (strcmp(line,arr[7]) == 0)
         number = 2;
-    else if (strcmp(line,arr[8]) == 0)
+    else if (strcmp(line,arr[7]) == 0)
         number = 6;
+    else if (strcmp(line,arr[8]) == 0)
+        number = 7;
     return (number);
 }
 

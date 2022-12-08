@@ -23,13 +23,8 @@ int	main(void)
 {
 	char	*line;
 	int		chr_index = 0;
-	int		i = 1;
 	int		fd1 = open("day6.txt", O_RDONLY);
-	while (i <= 1)
-	{
-		line = get_next_line(fd1);
-		chr_index = check_index(line);
-		i++;
-	}
+	line = get_next_line(fd1);
+	chr_index = check_index(line);
 	printf("%d\n", chr_index);
 }

@@ -6,7 +6,7 @@
 /*   By: dvaisman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/26 14:51:59 by dvaisman          #+#    #+#             */
-/*   Updated: 2022/12/04 15:59:37 by dvaisman         ###   ########.fr       */
+/*   Updated: 2022/12/07 21:36:24 by dvaisman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,10 @@
 # include <fcntl.h>
 # include <stdlib.h>
 # include <stdbool.h>
+# include <string.h>
 
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 1000
+#  define BUFFER_SIZE 10000
 # endif
 
 int		ft_atoi(const char *str);

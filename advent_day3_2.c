@@ -45,14 +45,10 @@ int	main(void)
 	char	*line;
 	char	*line_1;
 	char	*line_2;
-	static int		number;
-	static int		sum;
-	int		i;
-	int		fd1;
-	fd1 = open("inventory.txt", O_RDONLY);
-	i = 1;
-	number = 0;
-	sum = 0;
+	static int		sum = 0;
+	static int		number = 0;
+	int		i = 1;
+	int		fd1 = open("day3.txt", O_RDONLY);
 	while (i <= 100)
 	{
 		line = get_next_line(fd1);
